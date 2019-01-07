@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                     ).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+                            Log.e("Authentication failed: ", e.getMessage());
                             Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
                             hideDialog();
                         }

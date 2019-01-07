@@ -113,7 +113,7 @@
         android:src="@drawable/profit_chart"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/relLayout0"
-        android:contentDescription="@string/tabian_consulting_sales_chart"/>
+        android:contentDescription="@string/aa_consulting_sales_chart"/>
 
 
 </RelativeLayout>

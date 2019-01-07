@@ -11,11 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.aa.firebase.utility.UniversalImageLoader;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class SignedInActivity extends AppCompatActivity {
 
@@ -38,6 +40,13 @@ public class SignedInActivity extends AppCompatActivity {
 
         setUserDetails();
 
+        initImageLoader();
+
+    }
+
+    private void initImageLoader(){
+        UniversalImageLoader imageLoader = new UniversalImageLoader(SignedInActivity.this);
+        ImageLoader.getInstance().init(imageLoader.getConfig());
     }
 
     private void setUserDetails() {
@@ -112,6 +121,10 @@ public class SignedInActivity extends AppCompatActivity {
                 return true;
             case R.id.optionAccountSettings:
                 Intent intent = new Intent(SignedInActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.optionChat:
+                intent = new Intent(SignedInActivity.this, ChatActivity.class);
                 startActivity(intent);
                 return true;
             default:

@@ -24,7 +24,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:src="@drawable/aa_consulting"
-                android:contentDescription="@string/tabian_consulting_logo"/>
+                android:contentDescription="@string/aa_consulting_logo"/>
 
             <EditText
                 android:id="@+id/email"
